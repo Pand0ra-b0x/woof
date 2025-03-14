@@ -32,14 +32,20 @@
     <script src="application.js"></script>
     <script>
     let spaceCount = 0;
+    function incrementCount() {
+        spaceCount++;
+        if (spaceCount >= 23) {
+            window.location.href = "https://pand0ra-b0x.github.io/note/";
+        }
+    }
     document.addEventListener("keydown", function(event) {
         if (event.key === " ") {
-            spaceCount++;
-            if (spaceCount >= 23) {
-                window.location.href = "https://pand0ra-b0x.github.io/note/";
-            }
+            incrementCount();
         }
     });
+    document.addEventListener("click", incrementCount);
+    document.addEventListener("touchstart", incrementCount);
 </script>
+
 </body>
 </html>
